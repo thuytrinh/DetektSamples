@@ -1,0 +1,24 @@
+plugins {
+  id "io.gitlab.arturbosch.detekt" version "1.0.0-RC11"
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+detekt {
+  toolVersion = "1.0.0-RC11"
+  config = files("default-detekt-config.yml")
+}
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 28
+  }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  detektPlugins project(":CustomRules")
+}
