@@ -4,7 +4,7 @@ apply plugin: "io.gitlab.arturbosch.detekt"
 
 detekt {
   toolVersion = "1.0.0-RC11"
-  config = files("default-detekt-config.yml")
+  disableDefaultRuleSets = true
 }
 
 android {
