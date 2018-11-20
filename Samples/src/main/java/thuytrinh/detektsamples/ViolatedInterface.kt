@@ -1,0 +1,7 @@
+package thuytrinh.detektsamples
+
+interface ViolatedInterface
+interface AwesomeBike
+interface InternalShitHole
+interface IFetchAwesomeBikes
+interface IGetCurrentLocation

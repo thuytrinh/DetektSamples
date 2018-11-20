@@ -10,7 +10,8 @@ class SampleProvider : RuleSetProvider {
   override fun instance(config: Config): RuleSet {
     return RuleSet(
       ruleSetId, listOf(
-        CustomTooManyFunctions()
+        CustomTooManyFunctions(),
+        InterfaceNamesShouldStartWithI()
       )
     )
   }
